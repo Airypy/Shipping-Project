@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="https://lh3.googleusercontent.com/DJCEEG0QUT-9nzgRZkrw7ITtypMuOjkmWwX1weF-ZoPlNNSUxckk_8VqkzX7vuhkoWG5=s180-rw" width="30" height="30" class="d-inline-block align-top" alt="">
+        Zilla
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zila_app:signin' %}">Sign in</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'admin:index' %}">Admin<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        {% block content %}
+        {% endblock %}
+
+      </div>
+
+    </div>
+  </body>
+</html>

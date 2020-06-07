@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+{% extends "zila_app/base.html" %}
+      {% block content %}
+        <h1>Welcome to Zilla</h1>
+        <h2>New Here? <a href="{% url 'zila_app:signin' %}">Sign up</a></h2>
+      {% endblock %}
